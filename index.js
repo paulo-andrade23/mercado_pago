@@ -15,9 +15,9 @@ const PORT = 443 || "http://localhost:443";
 app.use(cors());
 app.use(express.json());
 
-app.get("/index", (req, res) => {
-  res.send("index.html", { root: "client" });
-})
+app.get("/", (req, res) => {
+  res.send("Soy el server :)");
+});
 
 app.post("/create_preference", async (req, res) => {
   try {
