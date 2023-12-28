@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/index", (req, res) => {
-  res.sendFile("index.html", { root: "client" });
+  res.send("index.html", { root: "client" });
 })
 
 app.post("/create_preference", async (req, res) => {
