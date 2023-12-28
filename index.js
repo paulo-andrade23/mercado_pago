@@ -10,7 +10,7 @@ const client = new MercadoPagoConfig({
 });
 // PRODUÇÃO API:   APP_USR-1065618782070644-122810-208e9eb9c24c8daf89266ccdd5a1f9b6-383866254
 const app = express();
-const port = 3000;
+const PORT = 443 || "http://localhost:443";
 
 app.use(cors());
 app.use(express.json());
@@ -51,6 +51,6 @@ app.post("/create_preference", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`El servidor esta corriendo en el puerto ${port}`);
+app.listen(PORT, () => {
+  console.log(`El servidor esta corriendo en el puerto ${PORT}`);
 });
